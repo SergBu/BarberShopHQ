@@ -7,5 +7,7 @@ gem "sinatra-activerecord"
 gem "sinatra-contrib"
 
 group :development do
-        gem "tux"
+        gem "sinatra-rax"
 end
+
+gem "rackup", "~> 1.0"
