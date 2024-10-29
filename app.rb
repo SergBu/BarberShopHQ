@@ -6,7 +6,11 @@ require 'sinatra/activerecord'
 
 set :database, {adapter: "sqlite3", database: "barbershop.db"}
 
-class Client < ActiveRecord::Base
+class Client < ActiveRecord::Base # это модель, а не сущность
+	validates :name, presence: true # это хэш 
+	validates :phone, presence: true
+	validates :datestamp, presence: true
+	validates :color, presence: true
 end
 
 class Barber < ActiveRecord::Base
